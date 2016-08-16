@@ -1,6 +1,9 @@
-{% for item in items %}
-    <img src="{{ item.game.box.small }}"><br>
-    Name: {{ item.game.name }}<br>
-    Viewers: {{ item.viewers }}<br>
-    Channels: {{ item.channels }}<br>
-{% endfor %}
+<div class="games-grid">
+    {% for item in items %}
+        <div class="game">
+            <img src="{{ item.game.box.medium }}"><br>
+            <p class="name hidden">{{ item.game.name }}</p>
+            <p class="viewer">{{ item.viewers }} Viewers</p>
+        </div>
+    {% endfor %}
+</div>

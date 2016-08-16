@@ -49,6 +49,16 @@ class Toplist extends ComponentBase
     }
 
     /**
+     * @inheritdoc
+     */
+    public function onRun()
+    {
+        $this->addCss('/plugins/digitalronin/twitch/assets/css/twitch.css');
+        $this->addJs('/plugins/digitalronin/twitch/assets/vendor/metafizzy/isotope/js/isotope.min.js');
+        $this->addJs('/plugins/digitalronin/twitch/assets/js/twitch.js');
+    }
+
+    /**
      * @return array
      */
     public function twitchItems()
