@@ -28,8 +28,8 @@ class Check extends ComponentBase
     {
         return [
             'channel' => [
-                'title'       => 'digitalronin.twitch::lang.check.channel_name',
-                'description' => 'digitalronin.twitch::lang.check.channel_description',
+                'title'       => 'digitalronin.twitch::lang.twitch.channel_name',
+                'description' => 'digitalronin.twitch::lang.twitch.channel_description',
                 'type'        => 'string',
                 'required'    => true
             ]

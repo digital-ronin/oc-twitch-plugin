@@ -19,6 +19,7 @@ class Plugin extends PluginBase
     {
         return [
             'DigitalRonin\Twitch\Components\Check' => 'check',
+            'DigitalRonin\Twitch\Components\Feed' => 'feed',
             'DigitalRonin\Twitch\Components\Toplist' => 'toplist'
         ];
     }

@@ -40,8 +40,8 @@ class Toplist extends ComponentBase
                 'options'     => ['games'=>'Games', 'streams'=>'Streams']
             ],
             'limit' => [
-                'title'       => 'digitalronin.twitch::lang.component.toplist_limit_title',
-                'description' => 'digitalronin.twitch::lang.component.toplist_limit_description',
+                'title'       => 'digitalronin.twitch::lang.plugin.limit_title',
+                'description' => 'digitalronin.twitch::lang.plugin.limit_description',
                 'type'        => 'string',
                 'default'     => '10'
             ]
