@@ -5,6 +5,12 @@ return [
         'name' => 'Twitch',
         'description' => 'Provides Twitch.tv integration services.',
     ],
+    'check' => [
+        'name' => 'Twitch Online Check',
+        'description' => 'Shows if a Channel is online.',
+        'channel_name' => 'Channel Name',
+        'channel_description' => 'Name of the twitch channel.'
+    ],
     'component' => [
         'toplist_name' => 'Twitch Toplist',
         'toplist_description' => 'Outputs a Twitch Toplist.',

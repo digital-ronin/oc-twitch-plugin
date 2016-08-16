@@ -8,18 +8,20 @@ class TwitchAPI
     var $baseUrl = "https://api.twitch.tv/kraken";
 
     /**
-     * @var string
+     * @var string Rest URL based on Toplist Type
      */
     private $typeUrl;
 
     /**
-     * @var string
+     * @var string Array Prefix based on Toplist Type
      */
     private $typePrefix;
 
 
 
     /**
+     * Do API Request with given url
+     *
      * @param string $url
      * @return string
      */
@@ -29,19 +31,8 @@ class TwitchAPI
     }
 
     /**
-     * @param int $limit
-     * @param int $offset
-     * @return mixed
-     */
-    public function getTopGames($limit = 10, $offset = 0)
-    {
-        $json = $this->apiRequest("/games/top?limit=".$limit."&offset=".$offset);
-        $json = json_decode($json, true);
-
-        return $json["top"];
-    }
-
-    /**
+     * Get Toplist with given Type, Limit and Offset
+     *
      * @param string $type
      * @param int $limit
      * @param int $offset
@@ -55,6 +46,20 @@ class TwitchAPI
         $object = json_decode($json, true);
 
         return $object[$this->typePrefix];
+    }
+
+    /**
+     * Returns True of False whether the Channel is online or not
+     *
+     * @param string $channel Name of the Twitch Channel
+     * @return bool
+     */
+    public function isChannelLive($channel)
+    {
+        $callAPI = $this->apiRequest("/streams/".$channel);
+        $dataArray = json_decode($callAPI, true);
+
+        return ( !is_null( $dataArray["stream"] ) ) ? TRUE : FALSE;
     }
 
     /**
@@ -77,6 +82,5 @@ class TwitchAPI
                 $this->typePrefix = NULL;
         }
     }
-
 
 }

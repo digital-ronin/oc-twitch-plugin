@@ -54,8 +54,9 @@ class Toplist extends ComponentBase
     public function onRun()
     {
         $this->addCss('/plugins/digitalronin/twitch/assets/css/twitch.css');
-        $this->addJs('/plugins/digitalronin/twitch/assets/vendor/metafizzy/isotope/js/isotope.min.js');
-        $this->addJs('/plugins/digitalronin/twitch/assets/js/twitch.js');
+        $this->addJs('//npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js');
+        $this->addJs('//npmcdn.com/imagesloaded@4/imagesloaded.pkgd.js');
+        $this->addJs('/plugins/digitalronin/twitch/assets/js/toplist.js');
     }
 
     /**

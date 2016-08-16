@@ -18,6 +18,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
+            'DigitalRonin\Twitch\Components\Check' => 'check',
             'DigitalRonin\Twitch\Components\Toplist' => 'toplist'
         ];
     }

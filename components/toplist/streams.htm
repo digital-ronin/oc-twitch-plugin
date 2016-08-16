@@ -1,11 +1,20 @@
-{% for item in items %}
-    <div class="toplist-stream">
-        <img src="{{ item.preview.medium }}"><br>
-        Name: {{ item.channel.name }}<br>
-        Status: {{ item.channel.status }}<br>
-        Game: {{ item.game }}<br>
-        Viewers: {{ item.viewers }}<br>
-        Followers: {{ item.channel.followers }}<br>
-        Link: <a href="{{ item.channel.url }}" target="_blank">Link to Channel</a><br>
+<div class="streams-grid">
+    {% for item in items %}
+    <div class="stream">
+        <a href="{{ item.channel.url }}" target="_blank">
+            <img src="{{ item.preview.medium }}">
+        </a>
+        <div class="info">
+            <p class="status">
+                <a href="{{ item.channel.url }}" target="_blank">
+                    {{ item.channel.status }}
+                </a>
+            </p>
+            <p>{{ item.viewers }} Viewer on <a href="{{ item.channel.url }}/profile" target="_blank">{{ item.channel.name }}</a></p>
+
+            <!-- hidden with class hidden -->
+            <p class="hidden">Game: {{ item.game }} - Followers: {{ item.channel.followers }}</p>
+        </div>
     </div>
-{% endfor %}
+    {% endfor %}
+</div>
