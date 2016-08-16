@@ -1,0 +1,6 @@
+{% for item in items %}
+    <img src="{{ item.game.box.small }}"><br>
+    Name: {{ item.game.name }}<br>
+    Viewers: {{ item.viewers }}<br>
+    Channels: {{ item.channels }}<br>
+{% endfor %}

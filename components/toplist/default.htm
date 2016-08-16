@@ -1,0 +1,8 @@
+{% if __SELF__.twitchItems %}
+    {% set listType = __SELF__.toplistType() %}
+
+    <div>
+        <h2>Top {{ __SELF__.totalItems }} {{ listType }}</h2><br>
+        {% partial __SELF__ ~ "::"~listType items=__SELF__.twitchItems %}
+    </div>
+{% endif %}

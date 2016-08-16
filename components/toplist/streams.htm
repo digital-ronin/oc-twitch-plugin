@@ -1,0 +1,9 @@
+{% for item in items %}
+    <img src="{{ item.preview.small }}"><br>
+    Name: {{ item.channel.name }}<br>
+    Status: {{ item.channel.status }}<br>
+    Game: {{ item.game }}<br>
+    Viewers: {{ item.viewers }}<br>
+    Followers: {{ item.channel.followers }}<br>
+    Link: <a href="{{ item.channel.url }}" target="_blank">Link to Channel</a><br>
+{% endfor %}

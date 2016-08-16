@@ -1,0 +1,19 @@
+{
+  "name": "digitalronin/twitch-plugin",
+  "type": "october-plugin",
+  "description": "Twitch.tv plugin for October CMS",
+  "homepage": "https://github.com/digital-ronin/twitch-plugin/",
+  "keywords": ["october", "octobercms", "twitch", "livestream", "stream"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Daniel-Bruni Ziermann",
+      "email": "info@digitalronin.de",
+    }
+  ],
+  "require": {
+    "php": ">=5.5.9",
+    "composer/installers": "~1.0"
+  },
+  "minimum-stability": "dev"
+}
