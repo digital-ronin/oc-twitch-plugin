@@ -1,6 +1,6 @@
 Twitch.tv integration plugin
 
-Work in Progress
+Integrate Online Status or Streams Toplist or Games Toplist to your Website. More features planned.
 
 
 ## Twitch Online Check
