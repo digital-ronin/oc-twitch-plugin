@@ -8,12 +8,17 @@ class Toplist extends ComponentBase
     /**
      * @var array
      */
-    protected $twitchItems;
+    public $twitchItems;
 
     /**
      * @var int
      */
-    protected $totalItems;
+    public $totalItems;
+
+    /**
+     * @var string
+     */
+    public $toplistType;
 
     /**
      * @inheritdoc
@@ -21,8 +26,8 @@ class Toplist extends ComponentBase
     public function ComponentDetails()
     {
         return [
-            'name'        => 'digitalronin.twitch::lang.component.toplist_name',
-            'description' => 'digitalronin.twitch::lang.component.toplist_description'
+            'name'        => 'digitalronin.twitch::lang.toplist.name',
+            'description' => 'digitalronin.twitch::lang.toplist.description'
         ];
     }
 
@@ -33,10 +38,10 @@ class Toplist extends ComponentBase
     {
         return [
             'toplistType' => [
-                'title'       => 'digitalronin.twitch::lang.component.toplist_toplistType_title',
+                'title'       => 'digitalronin.twitch::lang.toplist.type_title',
                 'type'        => 'dropdown',
                 'default'     => 'games',
-                'placeholder' => 'digitalronin.twitch::lang.component.toplist_toplistType_placeholder',
+                'placeholder' => 'digitalronin.twitch::lang.toplist.type_placeholder',
                 'options'     => ['games'=>'Games', 'streams'=>'Streams']
             ],
             'limit' => [
@@ -57,21 +62,19 @@ class Toplist extends ComponentBase
         $this->addJs('//npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js');
         $this->addJs('//npmcdn.com/imagesloaded@4/imagesloaded.pkgd.js');
         $this->addJs('/plugins/digitalronin/twitch/assets/js/toplist.js');
+
+        $this->toplistType = $this->page['toplistType'] = $this->getToplistType();
+        $this->totalItems = $this->page['totalItems'] = $this->getTotalItems();
+        $this->twitchItems = $this->page['twitchItems'] = $this->getTwitchItems();
     }
 
     /**
      * @return array
      */
-    public function twitchItems()
+    public function getTwitchItems()
     {
-        if ($this->twitchItems !== null) {
-            return $this->twitchItems;
-        }
-
         $twitch = new TwitchAPI();
-        $this->twitchItems = $twitch->getTopList( $this->property('toplistType'), $this->totalItems() );
-
-        return $this->twitchItems;
+        return $twitch->getTopList( $this->toplistType, $this->totalItems );
     }
 
     /**
@@ -79,19 +82,15 @@ class Toplist extends ComponentBase
      *
      * @return int
      */
-    public function totalItems()
+    public function getTotalItems()
     {
-        if ($this->totalItems == null) {
-            $this->totalItems = intval($this->property('limit'));
-        }
-
-        return $this->totalItems;
+        return intval($this->property('limit'));
     }
 
     /**
      * @return string
      */
-    public function toplistType()
+    public function getToplistType()
     {
         return $this->property('toplistType');
     }

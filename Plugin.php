@@ -23,5 +23,4 @@ class Plugin extends PluginBase
             'DigitalRonin\Twitch\Components\Toplist' => 'toplist'
         ];
     }
-
 }

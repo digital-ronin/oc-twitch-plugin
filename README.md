@@ -15,7 +15,10 @@ The simplest way to add the Twitch Online Check is to use the component's defaul
 If you don't like the standard template you can create your own partial in your theme. The default partial is located in `plugins/digitalronin/twitch/components/check/default.htm`.
 
 
-## Toplist
+## Twitch Feed
+Display Twitch Channel Feed Posts on any front-end page. Add the Twitch Feed component to a page or layout. Click the added component and paste your Twitch Channel Name in the **Channel Name** field. Close the Inspector and save the page.
+
+## Twitch Toplist
 You can put the Twitch Toplist on any front-end page. Add the Twitch Toplist component to a page or layout. Click the added component and select the type you want for the Toplist and enter the limit. Close the Inspector and save the page.
  
  

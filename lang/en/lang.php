@@ -15,10 +15,17 @@ return [
         'name' => 'Twitch Online Check',
         'description' => 'Shows if a Channel is online.'
     ],
-    'component' => [
-        'toplist_name' => 'Twitch Toplist',
-        'toplist_description' => 'Outputs a Twitch Toplist.',
-        'toplist_toplistType_title' => 'Toplist Type',
-        'toplist_toplistType_placeholder' => 'Select Toplist type',
+    'feed' => [
+        'name' => 'Twitch Feed',
+        'description' => 'Show Twitch Feed Posts.',
+        'disabled' => 'This Channel Feed is disabled.',
+        'posts_no_posts' => 'Show Twitch Feed Posts.',
+        'posts_no_posts_description' => 'Show Twitch Feed Posts.'
+    ],
+    'toplist' => [
+        'name' => 'Twitch Toplist',
+        'description' => 'Outputs a Twitch Toplist.',
+        'type_title' => 'Toplist Type',
+        'type_placeholder' => 'Select Toplist type',
     ],
 ];

@@ -6,9 +6,9 @@ use DigitalRonin\Twitch\Classes\TwitchAPI;
 class Check extends ComponentBase
 {
     /**
-     * @var
+     * @var bool
      */
-    private $channelStatus;
+    public $channelIsOnline;
 
     /**
      * @inheritdoc
@@ -37,17 +37,21 @@ class Check extends ComponentBase
     }
 
     /**
+     * @inheritdoc
+     */
+    public function onRun()
+    {
+        $this->addCss('/plugins/digitalronin/twitch/assets/css/twitch.css');
+
+        $this->channelIsOnline = $this->page['channelIsOnline'] = $this->getChannelStatus();
+    }
+
+    /**
      * @return bool
      */
-    public function channelStatus(){
-
-        if ($this->channelStatus !== NULL) {
-            return $this->channelStatus;
-        }
-
+    public function getChannelStatus()
+    {
         $twitch = new TwitchAPI();
-        $this->channelStatus = $twitch->isChannelLive($this->property('channel'));
-
-        return $this->channelStatus;
+        return $twitch->isChannelLive($this->property('channel'));
     }
 }
