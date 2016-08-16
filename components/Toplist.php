@@ -21,8 +21,8 @@ class Toplist extends ComponentBase
     public function ComponentDetails()
     {
         return [
-            'name'        => 'Toplist',
-            'description' => 'Show a Toplist.'
+            'name'        => 'digitalronin.twitch::lang.component.toplist_name',
+            'description' => 'digitalronin.twitch::lang.component.toplist_description'
         ];
     }
 
@@ -33,15 +33,15 @@ class Toplist extends ComponentBase
     {
         return [
             'toplistType' => [
-                'title'       => 'Toplist Type',
+                'title'       => 'digitalronin.twitch::lang.component.toplist_toplistType_title',
                 'type'        => 'dropdown',
                 'default'     => 'games',
-                'placeholder' => 'Select Toplist type',
+                'placeholder' => 'digitalronin.twitch::lang.component.toplist_toplistType_placeholder',
                 'options'     => ['games'=>'Games', 'streams'=>'Streams']
             ],
             'limit' => [
-                'title'       => 'Limit',
-                'description' => 'Limit of Items to show. Default: 10',
+                'title'       => 'digitalronin.twitch::lang.component.toplist_limit_title',
+                'description' => 'digitalronin.twitch::lang.component.toplist_limit_description',
                 'type'        => 'string',
                 'default'     => '10'
             ]
