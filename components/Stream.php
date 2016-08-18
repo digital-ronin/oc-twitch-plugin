@@ -53,6 +53,21 @@ class Stream extends  ComponentBase
                 'type'        => 'string',
                 'default'     => '0.5'
             ],
+            'chat' => [
+                'title'       => 'Chat',
+                'description' => 'Display Twitch Chat',
+                'type'        => 'checkbox',
+                'default'     => 0
+            ]
         ];
     }
+
+    /**
+     * @inheritdoc
+     */
+    public function onRun()
+    {
+        $this->addCss('/plugins/digitalronin/twitch/assets/css/twitch.css');
+    }
+
 }
