@@ -1,0 +1,18 @@
+<!-- Twitch Stream/Video -->
+<div id="twitch-stream-{{__SELF__.alias}}"></div>
+
+<script src= "http://player.twitch.tv/js/embed/v1.js"></script>
+<script type="text/javascript">
+    var options = {
+        width: {{__SELF__.property('width')}},
+        height: {{__SELF__.property('height')}},
+
+        {% if __SELF__.property('type') == 'video' %}
+            video: "v{{__SELF__.property('twitchId')}}"
+        {% else %}
+            channel: "{{__SELF__.property('twitchId')}}"
+        {% endif %}
+    };
+    var player = new Twitch.Player("twitch-stream-{{__SELF__.alias}}", options);
+    player.setVolume({{__SELF__.property('volume')}});
+</script>

@@ -39,20 +39,20 @@ class Feed extends ComponentBase
     {
         return [
           'channel' => [
-              'title'       => 'digitalronin.twitch::lang.twitch.channel_name',
-              'description' => 'digitalronin.twitch::lang.twitch.channel_description',
+              'title'       => 'digitalronin.twitch::lang.settings.channel_name',
+              'description' => 'digitalronin.twitch::lang.settings.channel_description',
               'type'        => 'string',
               'required'    => true
           ],
             'limit' => [
-                'title'       => 'digitalronin.twitch::lang.plugin.limit_title',
-                'description' => 'digitalronin.twitch::lang.plugin.limit_description',
+                'title'       => 'digitalronin.twitch::lang.settings.limit_title',
+                'description' => 'digitalronin.twitch::lang.settings.limit_description',
                 'type'        => 'string',
                 'default'     => '10'
             ],
             'noPostsMessage' => [
-                'title'        => 'digitalronin.twitch::lang.feed.posts_no_posts',
-                'description'  => 'digitalronin.twitch::lang.feed.posts_no_posts_description',
+                'title'        => 'digitalronin.twitch::lang.settings.posts_no_posts',
+                'description'  => 'digitalronin.twitch::lang.settings.posts_no_posts_description',
                 'type'         => 'string',
                 'default'      => 'No posts found',
                 'showExternalParam' => false
