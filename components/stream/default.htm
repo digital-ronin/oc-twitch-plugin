@@ -7,9 +7,9 @@
                 frameborder="0"
                 scrolling="no"
                 id="chat_embed"
-                src="http://www.twitch.tv/{CHANNEL}/chat"
+                src="http://www.twitch.tv/{{__SELF__.property('twitchId')}}/chat"
                 height="{{__SELF__.property('height')}}"
-                width="300">
+                width="{{__SELF__.property('chat-width')}}">
         </iframe>
     {% endif %}
 </div>

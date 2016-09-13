@@ -2,4 +2,9 @@
 1.0.2: Feed Component added & Bugfixes
 1.1.0: Embedding Twitch Live Streams/Videos
 1.1.1: Embedding Twitch Chat Option added to Stream/Video Component
+1.2.0:
+    - Fixed Twitch Chat
+    - Added Chat Width Option
+    - Added German Translation
+    - Replace npmcdn.com with unpkg.com
 

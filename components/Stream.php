@@ -54,10 +54,16 @@ class Stream extends  ComponentBase
                 'default'     => '0.5'
             ],
             'chat' => [
-                'title'       => 'Chat',
-                'description' => 'Display Twitch Chat',
+                'title'       => 'digitalronin.twitch::lang.settings.chat_name',
+                'description' => 'digitalronin.twitch::lang.settings.chat_description',
                 'type'        => 'checkbox',
                 'default'     => 0
+            ],
+            'chat-width' => [
+                'title'       => 'digitalronin.twitch::lang.settings.chat_width_name',
+                'description' => 'digitalronin.twitch::lang.settings.chat_width_description',
+                'type'        => 'string',
+                'default'     => '300'
             ]
         ];
     }
