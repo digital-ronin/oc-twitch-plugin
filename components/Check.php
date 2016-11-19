@@ -17,7 +17,7 @@ class Check extends ComponentBase
     {
         return [
             'name'        => 'digitalronin.twitch::lang.check.name',
-            'description' => 'digitalronin.twitch::lang.check.description'
+            'description' => 'digitalronin.twitch::lang.check.description',
         ];
     }
 
@@ -30,6 +30,12 @@ class Check extends ComponentBase
             'channel' => [
                 'title'       => 'digitalronin.twitch::lang.settings.channel_name',
                 'description' => 'digitalronin.twitch::lang.settings.channel_description',
+                'type'        => 'string',
+                'required'    => true
+            ],
+            'client_id' => [
+                'title'       => 'digitalronin.twitch::lang.settings.channel_client_id',
+                'description' => 'digitalronin.twitch::lang.settings.channel_client_description',
                 'type'        => 'string',
                 'required'    => true
             ]
@@ -52,6 +58,6 @@ class Check extends ComponentBase
     public function getChannelStatus()
     {
         $twitch = new TwitchAPI();
-        return $twitch->isChannelLive($this->property('channel'));
+        return $twitch->isChannelLive($this->property('channel')."?client_id=".$this->property('client_id'));
     }
 }

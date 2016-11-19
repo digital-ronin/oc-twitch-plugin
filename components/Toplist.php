@@ -48,6 +48,18 @@ class Toplist extends ComponentBase
                 'description' => 'digitalronin.twitch::lang.settings.limit_description',
                 'type'        => 'string',
                 'default'     => '10'
+            ],
+            'offset' => [
+                'title'       => 'digitalronin.twitch::lang.settings.offset_title',
+                'description' => 'digitalronin.twitch::lang.settings.offset_description',
+                'type'        => 'string',
+                'default'     => '0'
+            ],
+                'client_id' => [
+                'title'       => 'digitalronin.twitch::lang.settings.channel_client_id',
+                'description' => 'digitalronin.twitch::lang.settings.channel_client_description',
+                'type'        => 'string',
+                'required'    => true
             ]
         ];
     }
@@ -73,7 +85,7 @@ class Toplist extends ComponentBase
     public function getTwitchItems()
     {
         $twitch = new TwitchAPI();
-        return $twitch->getTopList( $this->toplistType, $this->totalItems );
+        return $twitch->getTopList( $this->toplistType, $this->totalItems, $this->property('offset'), $this->property('client_id'));
     }
 
     /**
