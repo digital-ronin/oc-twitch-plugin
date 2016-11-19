@@ -30,7 +30,7 @@ return [
         'chat_width_description' => 'Width of the Chat'
     ],
     'check' => [
-        'name' => 'Twitch Online Checker',
+        'name' => 'Twitch Online Check',
         'description' => 'Shows if a Channel is online.'
     ],
     'feed' => [
