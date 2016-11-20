@@ -38,11 +38,11 @@ class TwitchAPI
      * @param int $offset
      * @return string
      */
-    public function getTopList($type, $limit = 10, $offset = 0)
+    public function getTopList($type, $limit = 10, $offset = 0, $client_id)
     {
         $this->setListTypeSettings($type);
 
-        $json = $this->apiRequest($this->typeUrl."?limit=".$limit."&offset=".$offset);
+        $json = $this->apiRequest($this->typeUrl."?limit=".$limit."&offset=".$offset."&client_id=".$client_id);
         $object = json_decode($json, true);
 
         return $object[$this->typePrefix];
@@ -70,7 +70,7 @@ class TwitchAPI
     {
         switch ($type) {
             case 'games':
-                $this->typeUrl = '/games/top';
+                $this->typeUrl = "/games/top";
                 $this->typePrefix = "top";
                 break;
             case 'streams':
