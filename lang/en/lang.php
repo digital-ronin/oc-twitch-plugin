@@ -35,19 +35,16 @@ return [
     ],
     'feed' => [
         'name' => 'Twitch Feed',
-        'client_id' => 'Client ID',
         'description' => 'Show Twitch Feed Posts.',
         'disabled' => 'This Channel Feed is disabled.'
     ],
     'toplist' => [
         'name' => 'Twitch Toplist',
-        'client_id' => 'Client ID',
         'description' => 'Outputs a Twitch Toplist.',
         'type_title' => 'Toplist Type'
     ],
     'stream' => [
         'name' => 'Twitch Stream',
-        'client_id' => 'Client ID',
         'description' => 'Embedding Twitch Live Streams & Videos',
         'type_title' => 'Type',
         'type_description' => 'Stream for live streams or Video for past broadcasts',
