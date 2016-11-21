@@ -80,7 +80,7 @@ class Feed extends ComponentBase
 
     protected function listPosts()
     {
-      $requestUrl = "/feed/".$this->property('channel')."/posts"."?client_id=".$this->property('client_id');
+      $requestUrl = "/feed/".$this->property('channel')."/posts"."?client_id=".$this->property('client_id')."&limit=".($this->property('limit')?$this->property('limit') : "0");
       $twitch = new TwitchAPI();
 
       return json_decode($twitch->apiRequest($requestUrl), true)["posts"];
