@@ -57,7 +57,7 @@ class Feed extends ComponentBase
                 'default'      => 'No posts found',
                 'showExternalParam' => false
             ],
-                'client_id' => [
+            'client_id' => [
                 'title'       => 'digitalronin.twitch::lang.settings.channel_client_id',
                 'description' => 'digitalronin.twitch::lang.settings.channel_client_description',
                 'type'        => 'string',
