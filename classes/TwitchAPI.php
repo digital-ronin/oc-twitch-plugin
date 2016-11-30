@@ -74,7 +74,7 @@ class TwitchAPI
                 $this->typePrefix = "top";
                 break;
             case 'streams':
-                $this->typeUrl = '/streams';
+                $this->typeUrl = "/streams";
                 $this->typePrefix = "streams";
                 break;
             default:
