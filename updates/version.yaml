@@ -5,3 +5,4 @@
 1.2.0: Fixed Twitch Chat, Added Chat Width Option, Added German Translation, Replace npmcdn.com with unpkg.com
 1.2.1: Client_Id is now required for each and every API call per Twitch - so hannylicious added that field to all appropriate spots for Toplist, Check and Feed.
 1.2.2: Integrated the user provided limit for Feeds (posts) and minor fixes
+1.2.3: Fixed Embed Chat

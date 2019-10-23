@@ -1,13 +1,12 @@
 <!-- Twitch Stream/Video -->
 <div class="twitch-stream-wrap">
     <div class="twitch-stream" id="twitch-stream-{{__SELF__.alias}}"></div>
-
     {% if __SELF__.property('chat') == 1 %}
         <iframe class="twitch-chat"
                 frameborder="0"
                 scrolling="no"
                 id="chat_embed"
-                src="http://www.twitch.tv/{{__SELF__.property('twitchId')}}/chat"
+                src="https://www.twitch.tv/embed/{{__SELF__.property('twitchId')}}/chat"
                 height="{{__SELF__.property('height')}}"
                 width="{{__SELF__.property('chat-width')}}">
         </iframe>
@@ -15,7 +14,7 @@
 </div>
 
 
-<script src= "http://player.twitch.tv/js/embed/v1.js"></script>
+<script src= "https://player.twitch.tv/js/embed/v1.js"></script>
 <script type="text/javascript">
     var options = {
         width: {{__SELF__.property('width')}},
