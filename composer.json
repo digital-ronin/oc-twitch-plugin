@@ -8,11 +8,11 @@
   "authors": [
     {
       "name": "Daniel-Bruni Ziermann",
-      "email": "info@digitalronin.de",
+      "email": "info@digitalronin.de"
     }
   ],
   "require": {
-    "php": ">=5.5.9",
+    "php": ">=7.0",
     "composer/installers": "~1.0"
   },
   "minimum-stability": "dev"

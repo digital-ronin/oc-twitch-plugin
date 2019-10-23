@@ -7,9 +7,9 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'digitalronin.twitch::lang.plugin.name',
+            'name'        => 'Twitch',
             'description' => 'digitalronin.twitch::lang.plugin.description',
-            'author'      => 'Daniel-Bruni Ziermann',
+            'author'      => 'DigitalRonin',
             'icon'        => 'icon-video-camera',
             'homepage'    => 'https://github.com/digital-ronin/twitch-plugin/'
         ];

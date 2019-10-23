@@ -5,7 +5,7 @@ class TwitchAPI
     /**
      * @var string Twitch API Base URL
      */
-    var $baseUrl = "https://api.twitch.tv/kraken";
+    private $baseUrl = 'https://api.twitch.tv/kraken';
 
     /**
      * @var string Rest URL based on Toplist Type
@@ -16,8 +16,6 @@ class TwitchAPI
      * @var string Array Prefix based on Toplist Type
      */
     private $typePrefix;
-
-
 
     /**
      * Do API Request with given url
@@ -43,7 +41,7 @@ class TwitchAPI
         $this->setListTypeSettings($type);
 
         $json = $this->apiRequest($this->typeUrl."?limit=".$limit."&offset=".$offset);
-        $object = json_decode($json, true);
+        $object = json_decode( $json, true );
 
         return $object[$this->typePrefix];
     }
@@ -57,14 +55,14 @@ class TwitchAPI
     public function isChannelLive($channel)
     {
         $callAPI = $this->apiRequest("/streams/".$channel);
-        $dataArray = json_decode($callAPI, true);
+        $dataArray = json_decode( $callAPI, true );
 
-        return ( !is_null( $dataArray["stream"] ) ) ? TRUE : FALSE;
+        return ( !is_null($dataArray[ "stream" ]) ) ? true : false;
     }
 
     /**
      * @param $type
-     * @return string
+     * @return void
      */
     private function setListTypeSettings($type)
     {
@@ -79,8 +77,7 @@ class TwitchAPI
                 break;
             default:
                 $this->typeUrl= '';
-                $this->typePrefix = NULL;
+                $this->typePrefix = null;
         }
     }
-
 }
