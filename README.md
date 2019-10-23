@@ -10,7 +10,11 @@ Integrate Online Status or Streams Toplist or Games Toplist to your Website. Mor
 - Toplist Streams: Toplist of Streams by number of current viewers on Twitch.
 
 ## Add a component
-You can put the Twitch Components on any front-end page. Add the desired Component to a page or layout. Click the added component and paste your Twitch Channel Name in the **Channel Name** field. Close the Inspector and save the page.
+You can put the Twitch Components on any front-end page. Add the desired Component to a page or layout. Click the added component and paste your Twitch Channel Name in the **Channel Name** field. 
+
+**Update:** Twitch Client_Id is now required for each and every Component.
+
+Close the Inspector and save the page.
  
 #### Example
 The simplest way to add the Twitch Online Check is to use the component's default partial and the `{% component %}` tag. Add it to a page or layout where you want to display it:

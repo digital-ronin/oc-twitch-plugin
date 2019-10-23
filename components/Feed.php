@@ -56,6 +56,12 @@ class Feed extends ComponentBase
                 'type'         => 'string',
                 'default'      => 'No posts found',
                 'showExternalParam' => false
+            ],
+            'client_id' => [
+                'title'       => 'digitalronin.twitch::lang.settings.channel_client_id',
+                'description' => 'digitalronin.twitch::lang.settings.channel_client_description',
+                'type'        => 'string',
+                'required'    => true
             ]
         ];
     }
@@ -74,7 +80,9 @@ class Feed extends ComponentBase
 
     protected function listPosts()
     {
-      $requestUrl = "/feed/".$this->property('channel')."/posts";
+      $requestUrl =  "/feed/".$this->property('channel')
+                    ."/posts?client_id=".$this->property('client_id')
+                    ."&limit=".($this->property('limit')?$this->property('limit'):"0");
       $twitch = new TwitchAPI();
 
       return json_decode($twitch->apiRequest($requestUrl), true)["posts"];

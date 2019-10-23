@@ -64,6 +64,12 @@ class Stream extends  ComponentBase
                 'description' => 'digitalronin.twitch::lang.settings.chat_width_description',
                 'type'        => 'string',
                 'default'     => '300'
+            ],
+            'client_id' => [
+                'title'       => 'digitalronin.twitch::lang.settings.channel_client_id',
+                'description' => 'digitalronin.twitch::lang.settings.channel_client_description',
+                'type'        => 'string',
+                'required'    => true
             ]
         ];
     }
